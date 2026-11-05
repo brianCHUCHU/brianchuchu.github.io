@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="模型分級與價格歧視的觀察，以及硬體成本、監管和需求之間的拉扯。"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; connect-src 'none'; font-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-08-03"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="模型分級、價格戰與算力需求的變數 — Po-Yen Chu"><meta property="og:description" content="模型分級與價格歧視的觀察，以及硬體成本、監管和需求之間的拉扯。"><meta property="og:url" content="https://brianchuchu.github.io/writing/model-tiers-pricing-and-compute/"><meta property="og:image" content="https://brianchuchu.github.io/images/po-yen-chu-portrait.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://brianchuchu.github.io/writing/model-tiers-pricing-and-compute/"><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23121315%22/&gt;&lt;text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2254%22 fill=%22%23f2efe8%22 font-family=%22Arial%22&gt;P&lt;/text&gt;&lt;/svg&gt;"><title>模型分級、價格戰與算力需求的變數 — Po-Yen Chu</title><link rel="stylesheet" href="/_assets/BaseLayout.DOyE860q.css"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="site-name" href="/">Po-Yen Chu</a><nav aria-label="Primary navigation"><ul class="site-nav"><li><a href="/">Home</a></li><li><a href="/education/">Education</a></li><li><a href="/work/">Work experience</a></li><li><a href="/research/">Research</a></li><li><a href="/writing/" aria-current="page">Writing</a></li><li><a href="/about/">About</a></li><li><a href="/links/">Links</a></li></ul></nav></header><main id="main-content"><article class="article-page page-width" lang="zh-Hant"><header class="article-header"><a class="back-link" href="/writing/" lang="en">← Writing</a><p class="record-meta"><time datetime="2026-08-03">2026年8月3日</time> · Po-Yen Chu · 約 5 分鐘</p><h1>模型分級、價格戰與算力需求的變數</h1><p class="article-deck">模型分級與價格歧視的觀察，以及硬體成本、監管和需求之間的拉扯。</p><p class="article-topics">AI 產業 / 模型分級 / 使用心得</p><a class="article-photo-link" href="#article-photos">查看 2 張附圖 ↓</a></header><div class="article-body"><p>最近 gpt 5.6 Luna （gpt 最新一代的低階模型）大降價，OpenAI 把這個定位在「CP值更好」的模型。</p>
+<p>如果我們看常見的 benchmark，橫軸是花了多少錢，縱軸是測試分數，gpt luna 在前段沒那麼複雜的任務中的曲線確實是最靠左上的，也就是CP值最好。</p>
+<p>不過我自己使用的心得是 Luna 對於稍微 Scope 大一點的任務真的還是很容易欠缺考量或效率太低，也很常出現耍笨的狀況，但價格確實是便宜。</p>
+<p>即便價格便宜我後來還是不太用的原因，是因為即使是任務複雜度很低的東西，我覺得他對我在系統內設計好的文件與規範比較容易看漏，所以至少規劃還是要交給高階的來做。</p>
+<p>實際要部署的任務可能還是用最前沿的模型最保險，雖然價格貴一點但效率與安全性、正確性顯然是好很多。</p>
+<p>這兩天看到有人拿高階模型去指揮低階模型變成 Subagents 去實作，這說不定可行，因為至少文件、規則高階模型比較不會漏掉；</p>
+<p>且如果高階模型把實作計劃寫的超級明確的話，Luna 實作應該也沒什麼問題（嗎？好吧如果測試做得好也許可以 iterate 到正確吧）</p>
+<p>可能就是方向上要去要求高階模型的指揮與需求分配需要切的夠細並且把決策都做完，結果應該會比較好一點。</p>
+<ul>
+<li></li>
+</ul>
+<p>不過這波 OpenAI 的價格戰我覺得打得挺漂亮的。他的做法是把 Luna 價格降 80%、Terra 降 20%、Sol 維持不降價。</p>
+<p>我覺得這波價格歧視做得蠻好的，一方面真的要用來工作開發、做複雜研究的人，大概還是得一直用最前沿的模型，願付價格很高、價格彈性很低（胃口真的被越養越大）</p>
+<p>另一方面，原先應該有一大部分用量，不論是沒那麼 Serious 的 Side Project 還是拿 AI 來做比較簡單的事情的人，願付價格落在一個月 20 美金左右。</p>
+<p>但因為 Agent 就是模型能力 x 運行次數（時間）決定成本，而很多任務就是必須得運行很多次 call 很多工具，所以照原本的定價來看在使用上會很受限。</p>
+<p>可是現在把 Luna 的價格降下來以後，這類型的用途就變得有吸引力了，例如簡單文書工作流自動化、記帳、簡易的分析等等，就是那些困難度本身不高，但需要多次迭代與檢查的任務。</p>
+<p>總之就是讓用戶可以完成的事情變多了，大體上就是把任務的正確性、可維護性等等品質層面的做分流。</p>
+<p>但這也意味著如果這套是正確的價格歧視邏輯，那 20 美的方案用量大概回不去了…</p>
+<ul>
+<li></li>
+</ul>
+<p>前幾天聽一個業界大佬演講，大致上是覺得從供給端來看，他覺得資本支出過高、拿不到理想的 return 本質是因為硬體定價錯誤。</p>
+<p>他的脈絡是，GPU 佔成本的 50%，可是 Nvidia 每一年推的新一代架構是前一代的十倍。所以資本支出折舊六年看似每年減少 1/6，但實際上跟新的架構比更差了，價值遞減的更快。</p>
+<p>總之大體上就是他覺得後進者有優勢，可是如果真的是這樣的話，我之前那個 OpenAI secure 比較多算力是優勢這件事就好像站不住腳了。</p>
+<p>我後來還特別去問關於我的論點的想法，他覺得用租的就好。</p>
+<p>從供給端來看確實有一點道理，但還是要看需求啦，如果持續的供不應求（且定價可以 cover 舊架構比較高的單位支出）那可能就沒有所謂後進者優勢的問題。</p>
+<p>哎呀我不知道 XD，供給端定價錯誤的 concern 跟需求強勁兩件事都是真的，這 dynamic 太複雜了，好困難。</p>
+<ul>
+<li></li>
+</ul>
+<p>講到供不應求的假設，我就想到前陣子 Anthropic 的 Mythos 模型因為實在太強了，在資安上可以找出非常多的高風險漏洞，結果被美國政府封禁，只能提供給部分機構還有政府單位先進行測試，後來只能推出一個閹割版的 Mythos，也就是 Fable 5 給一般用戶使用。</p>
+<p>就連 Fable 5 一開始都只開放給美國人使用，Anthropic 的員工也不例外。</p>
+<p>當 AI 模型變成政治因素介入、國家資源的時候，其實我挺擔心會影響需求端。</p>
+<p>設想 Mythos 今天直接提供給所有人使用，且不分國籍，從 release 的那一天起，所有的企業用戶都必須不斷用 Mythos 去掃資安漏洞，否則隨時會被攻擊。</p>
+<p>光是這需求端就會提升多少了？工程師每部署一個版本就要讓 Mythos 去掃一次，甚至可能每天都要掃，因為很多套件漏洞是持續發現的。</p>
+<p>而且現在模型雖然很強了，不過在成本效益上肯定還是處在斜率很陡峭的成長階段，可是問題是我們已經來到一個臨界點是更強的模型絕對會被監管審查過，才決定可不可以 release。</p>
+<p>假設新的模型成本效益一定更好，那新模型被擋下來就意味著使用 AI 模型越過成本閾值的應用需求也被擋下來了。</p>
+<p>所以監管風險確實是一個要一直關注的議題，真的會影響需求。</p>
+<ul>
+<li></li>
+</ul>
+<p>兩個禮拜前久違的跑去打球，熱身的時候才在跟朋友講「我開始健身後還沒有練過球，想試試新身體了」這種中二的話。</p>
+<p>然後我就打斷了兩隻棒子，一支朋友的 800 塊，一支教授隊公用的 5000。</p>
+<p>打個球差點噴掉 5800，還好大家都捨不得叫我賠。</p>
+<p>以為是力量變大其實只是技術變差了……</p>
+<ul>
+<li></li>
+</ul>
+<p>上一週又沒更新，但我發現很多想法才一個禮拜沒講就已經快過時了。可能對我來說比較好的寫作方式還是像這樣一段一段的，然後每天強迫自己寫一兩個想法下來。</p>
+</div><section id="article-photos" class="article-gallery" aria-label="文章照片"><h2>照片與附圖</h2><p class="gallery-note">點選圖片可查看完整尺寸。</p><figure><a href="/images/writing/model-tiers-pricing-and-compute-01.webp" aria-label="三名球員在球場展示斷裂的球棒。（查看完整尺寸）"><img src="/images/writing/model-tiers-pricing-and-compute-01-small.webp" srcset="/images/writing/model-tiers-pricing-and-compute-01-small.webp 768w, /images/writing/model-tiers-pricing-and-compute-01.webp 1108w" sizes="(max-width: 720px) calc(100vw - 40px), 672px" width="1108" height="1477" alt="三名球員在球場展示斷裂的球棒。" loading="lazy" decoding="async"></a><figcaption>久違打球，結果打斷了兩支球棒</figcaption></figure><figure><a href="/images/writing/model-tiers-pricing-and-compute-02.webp" aria-label="球場座椅上放著兩支斷裂的球棒。（查看完整尺寸）"><img src="/images/writing/model-tiers-pricing-and-compute-02-small.webp" srcset="/images/writing/model-tiers-pricing-and-compute-02-small.webp 577w, /images/writing/model-tiers-pricing-and-compute-02.webp 1153w" sizes="(max-width: 720px) calc(100vw - 40px), 672px" width="1153" height="2048" alt="球場座椅上放著兩支斷裂的球棒。" loading="lazy" decoding="async"></a><figcaption>斷裂的球棒</figcaption></figure></section><footer class="article-footer"><details class="link-group"><summary><span>原文與討論</span></summary><ul><li><a href="https://www.facebook.com/poyen.brian.chu/posts/pfbid02YMzfRBC68FhL2Yr3hE4pt6RNaJ6ie3gqJPhU6xQfZAeo2DHqMSpqapxmNoZQXRi3l" target="_blank" rel="noopener noreferrer">Facebook 原文<span aria-hidden="true"> ↗</span></a></li></ul></details><p class="article-source-note">本文保留原文內容；標題、摘要與閱讀版式為網站整理。</p><a href="/writing/">← 返回文章列表</a></footer></article></main><footer class="site-footer"><div><p class="site-footer__name">Po-Yen Chu</p><p>M.S. student in Management Science and Engineering at Stanford University.</p></div><div class="site-footer__links"><a href="mailto:poyenchu@stanford.edu">Email</a><a href="https://www.linkedin.com/in/po-yen-chu" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/brianCHUCHU" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.facebook.com/poyen.brian.chu" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.threads.com/@poyen_49_2002" target="_blank" rel="noopener noreferrer">Threads</a><a href="/links/">More links</a></div><p class="site-footer__meta">© 2026</p></footer></body></html>

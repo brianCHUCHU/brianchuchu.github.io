@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="從沖繩旅行到開發平台，記錄多代理協作、任務分級與 Context 管理的使用體驗。"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; connect-src 'none'; font-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-08-10"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="沖繩旅行、Token Maxing 與 Agent 的協作方式 — Po-Yen Chu"><meta property="og:description" content="從沖繩旅行到開發平台，記錄多代理協作、任務分級與 Context 管理的使用體驗。"><meta property="og:url" content="https://brianchuchu.github.io/writing/okinawa-and-agent-orchestration/"><meta property="og:image" content="https://brianchuchu.github.io/images/po-yen-chu-portrait.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://brianchuchu.github.io/writing/okinawa-and-agent-orchestration/"><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23121315%22/&gt;&lt;text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2254%22 fill=%22%23f2efe8%22 font-family=%22Arial%22&gt;P&lt;/text&gt;&lt;/svg&gt;"><title>沖繩旅行、Token Maxing 與 Agent 的協作方式 — Po-Yen Chu</title><link rel="stylesheet" href="/_assets/BaseLayout.DOyE860q.css"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="site-name" href="/">Po-Yen Chu</a><nav aria-label="Primary navigation"><ul class="site-nav"><li><a href="/">Home</a></li><li><a href="/education/">Education</a></li><li><a href="/work/">Work experience</a></li><li><a href="/research/">Research</a></li><li><a href="/writing/" aria-current="page">Writing</a></li><li><a href="/about/">About</a></li><li><a href="/links/">Links</a></li></ul></nav></header><main id="main-content"><article class="article-page page-width" lang="zh-Hant"><header class="article-header"><a class="back-link" href="/writing/" lang="en">← Writing</a><p class="record-meta"><time datetime="2026-08-10">2026年8月10日</time> · Po-Yen Chu · 約 5 分鐘</p><h1>沖繩旅行、Token Maxing 與 Agent 的協作方式</h1><p class="article-deck">從沖繩旅行到開發平台，記錄多代理協作、任務分級與 Context 管理的使用體驗。</p><p class="article-topics">生活 / Coding Agent / Context</p><a class="article-photo-link" href="#article-photos">查看 2 張附圖 ↓</a></header><div class="article-body"><p>兩個禮拜前去沖繩，大概去了兩次大型購物商場，結果我兩次都在很舒服的沙發上睡著。</p>
+<p>其中一次我爸媽經過我，跑來我旁邊議論我的睡姿跟物品安全性我都沒醒來。</p>
+<p>不過逛到睡著的核心原因還是因為要去美國了，很多東西實在沒有購物的必要，買了還要帶。</p>
+<p>在其中一個超巨大商場時，我逛到一半時居然想著「好想現在拿起筆電繼續開發我的平台」。</p>
+<p>有了這個念頭以後我馬上開始反省 XD，實在是太違反人性了，一方面是那個禮拜 Tibo 一直重置 AI Token 額度而我的平台剛好在 Refactor，一直被 Token maxing 綁架。</p>
+<p>另一方面，可能是因為我物慾不是特別高？對我來說可能比較娛樂性且會花錢的可能就是旅行吧？不禁讓我思考賺錢這件事需要多少是舒服的。</p>
+<p>於是我仔細思考了一下人生中巨大的開銷，都是一些相對必須的東西，像學費、房子、車子這種的。果然需求穩定的東西價格總是比較貴。</p>
+<p>最後我整趟旅行一直到最後一天進去樂器行，才第一次覺得買了一個自己想要的東西。日本的吉他弦怎麼那麼便宜，買了三包包膜的。</p>
+<ul>
+<li></li>
+</ul>
+<p>買完吉他弦之後我跑去跟我爸媽他們會合（這次是阿嬤 80 大壽所以大家連姑姑他們家也一起去），他們在一個水產市場，一樓賣活海鮮、二樓代客料理那種。</p>
+<p>本來他們好像是沒有要吃，結果我到了我開始跟我阿嬤聊天，他說這邊帝王蟹賣 3000~4000 台幣，但台灣大概要 1 萬以上。</p>
+<p>我說那就吃啊，聽起來可以接受、似乎很划算？後來我姑丈也說他在台灣的話，同樣大小的帝王蟹 15 年前就要 1 萬 3。</p>
+<p>我們家的人（爸媽、我等）大為震驚，因為我們都不知道市場行情，於是在沖繩的最後一餐就決定吃這個了。</p>
+<p>人果然是沒辦法賺到認知以外的錢。這道理無論放在股票、工作還是購物都一樣。</p>
+<ul>
+<li></li>
+</ul>
+<p>最近因為學校付錢，我把我的 ChatGPT 升到 Pro 20x 了。</p>
+<p>Pro 20x 是真香，但即便我已經在一個 AI Agent friendly 的程式碼庫工作，真的要一整周都認真瘋狂開發，又要開最好的模型的話，我覺得週額度還是不夠用。</p>
+<p>但我覺得我個人不夠用的原因是這一年工作在搞的平台正在趕著上線部署，很多要調整的功能或是補壓力測試，實務上不太可能功能迭代這麼快，正常都需要開更多會與設計分析，把一些流程確認的更細節，不像我這樣先猛力推到 MVP 再慢慢優化。</p>
+<p>然後前陣子 Tibo（Codex 負責人）瘋狂送額度重置，這一週也突然就不送重置了，社群上大家一片焦慮，我相信一定有一大部分人胃口被養壞了因此升級 Pro。</p>
+<ul>
+<li></li>
+</ul>
+<p>因為升級到 Pro 我也解鎖了 Sol Ultra，Ultra 跟其他不一樣的就是他預設常駐一些 Subagent，然後推理強度最強。</p>
+<p>一開始用的時候覺得很慢（畢竟推理時間久 + 任務分派給 Subagent 要等他完成），但後來還是有發現好處的。</p>
+<p>首先就是我發現 Subagent 最大的價值在於很複雜的任務，或是需求分散的任務，Context 比較不會飄移。</p>
+<p>就想像讓一個人流水線的完成一個一個需求，跟一個人他只負責 orchestrate and review，交給其他人去做，肯定是後者對於全局的需求、原則掌握的會比較好。</p>
+<p>但真的也是蠻燒 token 的，我感覺他有的時候太執著於分工了笑死，很簡單的東西弄得過於嚴謹，推理強度還是要慎選。</p>
+<ul>
+<li></li>
+</ul>
+<p>其實我覺得這些 coding agent 在應用層應該還有很多優化的空間。</p>
+<p>舉例來說，根據不同需求複雜度，「模型分級」與「推理強度分級」的對任務的適配性可以差距非常巨大，不管是從產出層面還是成本層面，但目前卻沒有一個放在前面的 orchestration layer 去幫 end user 做掉這一層。</p>
+<p>對開發者可能無所謂，甚至保留自主控制會比較好。但如果要推廣到更 non-tech 的人我覺得還是挺必要的，否則 token efficiency 太低，需求就很難拉起來。</p>
+<ul>
+<li></li>
+</ul>
+<p>另一個可以優化的地方是對話 Context 管理的方式。</p>
+<p>先介紹一下，目前如果你想在 Agent 做到一半的時候補充資訊有兩種模式：一種是 Queued，等 Agent 做完才看你的補充，通常大家都是要做「下一步」但不想守在電腦前的時候會用這個功能，讓他自動在完成時送出；</p>
+<p>另一種是 Steer，比較像真的做到一半你要介入，也比較常用，那模型會把當下正在做的這一步做完之後，看你的補充，然後修正後面要做的事情。</p>
+<p>我上次做一個長時間執行的任務，我在他執行的時候看執行紀錄發現有些跟 expectation 不太一樣的地方，我就補了一些說明直接 Steer，好像一共 Steer 了兩次。</p>
+<p>結果不知為何 Codex 沒有把原先的需求做完，怎麼想都覺得這當中一定有可以優化的空間。</p>
+<ul>
+<li></li>
+</ul>
+<p>上次在社群上看到有人推薦 Codex 的註解功能，總之就是可以在送出對話前，打開 Codex 內建的瀏覽器或是預覽工具，針對網頁、文件想修改或是有問題的地方註解。</p>
+<p>對於網頁開發的好處在於，可以直接選對應的元件下註解，而且一次可以下好幾個註解，請他修改的時候他會找的比較快，也比較不容易改錯。</p>
+<p>去查了一下這功能居然已經出來很久了，而我完全沒跟到。果然在社群傳播哪怕再過時或微小的知識還是可以幫到很多人的。</p>
+</div><section id="article-photos" class="article-gallery" aria-label="文章照片"><h2>照片與附圖</h2><p class="gallery-note">點選圖片可查看完整尺寸。</p><figure><a href="/images/writing/okinawa-and-agent-orchestration-01.webp" aria-label="家人在沖繩海岸步道前合影。（查看完整尺寸）"><img src="/images/writing/okinawa-and-agent-orchestration-01-small.webp" srcset="/images/writing/okinawa-and-agent-orchestration-01-small.webp 768w, /images/writing/okinawa-and-agent-orchestration-01.webp 2048w" sizes="(max-width: 720px) calc(100vw - 40px), 672px" width="2048" height="1539" alt="家人在沖繩海岸步道前合影。" loading="lazy" decoding="async"></a><figcaption>沖繩家庭旅行</figcaption></figure><figure><a href="/images/writing/okinawa-and-agent-orchestration-02.webp" aria-label="水產市場水槽中的帝王蟹與貝類。（查看完整尺寸）"><img src="/images/writing/okinawa-and-agent-orchestration-02-small.webp" srcset="/images/writing/okinawa-and-agent-orchestration-02-small.webp 577w, /images/writing/okinawa-and-agent-orchestration-02.webp 1153w" sizes="(max-width: 720px) calc(100vw - 40px), 672px" width="1153" height="2048" alt="水產市場水槽中的帝王蟹與貝類。" loading="lazy" decoding="async"></a><figcaption>沖繩水產市場的帝王蟹</figcaption></figure></section><footer class="article-footer"><details class="link-group"><summary><span>原文與討論</span></summary><ul><li><a href="https://www.facebook.com/poyen.brian.chu/posts/pfbid02FsXrpDDuU23CZntsARbBAQasySpuCoqgv1MgZwBdNWUqLyMxaxr4GM1Jhnwaunqnl" target="_blank" rel="noopener noreferrer">Facebook 原文<span aria-hidden="true"> ↗</span></a></li></ul></details><p class="article-source-note">本文保留原文內容；標題、摘要與閱讀版式為網站整理。</p><a href="/writing/">← 返回文章列表</a></footer></article></main><footer class="site-footer"><div><p class="site-footer__name">Po-Yen Chu</p><p>M.S. student in Management Science and Engineering at Stanford University.</p></div><div class="site-footer__links"><a href="mailto:poyenchu@stanford.edu">Email</a><a href="https://www.linkedin.com/in/po-yen-chu" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/brianCHUCHU" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.facebook.com/poyen.brian.chu" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.threads.com/@poyen_49_2002" target="_blank" rel="noopener noreferrer">Threads</a><a href="/links/">More links</a></div><p class="site-footer__meta">© 2026</p></footer></body></html>

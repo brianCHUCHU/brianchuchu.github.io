@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="從 Codex 用量重置的使用體驗，思考訂閱制、算力與被創造出來的新需求。"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; connect-src 'none'; font-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-07-23"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="用量重置、算力與 Coding Agent 的需求 — Po-Yen Chu"><meta property="og:description" content="從 Codex 用量重置的使用體驗，思考訂閱制、算力與被創造出來的新需求。"><meta property="og:url" content="https://brianchuchu.github.io/writing/coding-agent-usage-resets/"><meta property="og:image" content="https://brianchuchu.github.io/images/po-yen-chu-portrait.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://brianchuchu.github.io/writing/coding-agent-usage-resets/"><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%23121315%22/&gt;&lt;text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2254%22 fill=%22%23f2efe8%22 font-family=%22Arial%22&gt;P&lt;/text&gt;&lt;/svg&gt;"><title>用量重置、算力與 Coding Agent 的需求 — Po-Yen Chu</title><link rel="stylesheet" href="/_assets/BaseLayout.DOyE860q.css"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="site-name" href="/">Po-Yen Chu</a><nav aria-label="Primary navigation"><ul class="site-nav"><li><a href="/">Home</a></li><li><a href="/education/">Education</a></li><li><a href="/work/">Work experience</a></li><li><a href="/research/">Research</a></li><li><a href="/writing/" aria-current="page">Writing</a></li><li><a href="/about/">About</a></li><li><a href="/links/">Links</a></li></ul></nav></header><main id="main-content"><article class="article-page page-width" lang="zh-Hant"><header class="article-header"><a class="back-link" href="/writing/" lang="en">← Writing</a><p class="record-meta"><time datetime="2026-07-23">2026年7月23日</time> · Po-Yen Chu · 約 4 分鐘</p><h1>用量重置、算力與 Coding Agent 的需求</h1><p class="article-deck">從 Codex 用量重置的使用體驗，思考訂閱制、算力與被創造出來的新需求。</p><p class="article-topics">Coding Agent / 算力 / 使用心得</p></header><div class="article-body"><p>最近 codex 短時間內從 6M 飆到 10M 用戶，我感覺大致上是因為：</p>
+<ol>
+<li>gpt 5.6 推出了，又可以跟 fable 打了</li>
+<li>usage reset 瘋狂大放送，相信開發者都已經開始把項目負責人 Tibo 的 X 開啟小鈴噹了，每天都在看他有沒有放消息要重置</li>
+<li>Chatgpt, Codex 的本機 app 兩者合併，應該有蠻多本來不用 Codex 的用戶因此跑去試用</li>
+</ol>
+<p>對於我們開發者來說，reset 是最重要的事情，偏偏他選在我上禮拜去沖繩的那個禮拜，但我還是把它燒好燒滿了XD</p>
+<p>其實把額度燒完本身從來就不應該是一個指標，我之前好多個禮拜都沒燒完也沒覺得怎樣，只是我最近剛好在趕工作的平台要上線，就完全覺得額度不夠用。</p>
+<ul>
+<li></li>
+</ul>
+<p>大放送 reset 這件事，從社群上的風向，我感覺應該從 Claude Code 那邊拉了不少用戶。</p>
+<p>本質上也是因為大家真的意識到，雖然很多人覺得 Fable 可能還是強一點，但以訂閱制來說，使用成本效益的差距已經大過模型能力帶來的效益了，這當然也是跟上次提到 OpenAI 真的有比較多算力儲備這件事有關。</p>
+<p>Anthropic 也被逼跟著 reset 還有延長 fable 的使用期間了，畢竟沒有 fable 就沒有可以跟 5.6 對打的模型。</p>
+<ul>
+<li></li>
+</ul>
+<p>只是我一直在想一直放送 reset 這件事真的可持續嗎？會不會不送了以後用戶就跑掉了？</p>
+<p>我想完以後的結論是偏向否，或者說決定性的因子不在這裡：</p>
+<p>第一個原因是訂閱制，背後終究可以隨時調整，且如果調整前後差距不大，用戶也很難判斷。例如有傳聞說 Codex 把 5hr limit 拔掉以後 weekly limit 可用的額度變少了，雖然我是不這樣覺得。</p>
+<p>這就有點朝三暮四的概念，reset 好像看起來，當然一定還是有額外成本跟福利沒錯，但終究可以把你控制在一個有效益的範圍內。</p>
+<p>第二個原因是 reset 機制其實沒有直覺上那麼划算。（好吧這可能單純是我數字直覺太差）</p>
+<p>我自己腦中的直覺一直是：「他送一次 reset 就是我的額度多了 100%」。但其實每 reset 一次，下一次重置的期間會再往後延一個完整的週期。</p>
+<p>假設原本每七天重置一次，在週期進行到一半時額外 reset，那麼截至原本第二個週期結束時，累計可用額度不是多 100%，而是只多半個週期，也就是約 50% 的單週額度。</p>
+<p>從官方的角度來看，他們一定也有一個 dashboard 去追蹤在哪個時間點重置是成本最低的。</p>
+<p>而且我是覺得 will benefit from reset 的人佔他 C side users 的比例應該很低…，前提是他防好中轉商透過這個機制大量薅羊毛就好。</p>
+<p>第三個原因就是創造需求…真的會讓使用者回不去，現在用量完全覺得不夠用，哭啊。</p>
+<p>其中有幾種因素，首先就是程式碼真的不用自己寫了，而且 use case 現在也越來越多，不僅在程式碼本身，很多電腦 UI 操作的東西也越來越好，前陣子還搞了個 record and replay。</p>
+<p>再來就是，回到程式開發來說，就是大家會開始把很多原本 scope 太大做不到的事情排進規劃裡面，像我自己以前換架構這種事情根本不可能去想，但現在也是一次會議就拍板的事情。</p>
+<p>甚至還看到有人在討論哪些元件是可以考慮用 Disposable 的概念去做，簡單說就是以前因為維護成本很高，都要做很嚴謹的管控、設計，可是現在例如某些前端元件，不夠用了或是要改丟給 AI 很快就可以做出來，那不如就做一次性的。</p>
+<ul>
+<li></li>
+</ul>
+<p>總的來說大家多用各家的 Coding Agent（Codex, Claude Code, Antigravity…），不會寫程式的也應該要練習，上次因為去日本我爸記帳覺得很麻煩，我用他的 antigravity 幫他弄就省了很多麻煩。</p>
+<p>主要原因其實就是 AI 現在已經做得到很多很多的日常電腦任務，只是要花多少 token 的區別，很厲害很熟的人就可以運用的更有效率。</p>
+<p>而且企業的「Token 價格 / 實際成本」短期內應該還是會越來越高，大家趕緊把握還有的玩、有的摸的時間，同樣的任務你可以比別人省多少 token 也是競爭力的一環。</p>
+<ul>
+<li></li>
+</ul>
+<p>前幾天因為實在燒不夠，問公司可不可以打統編買 pro 帳號，結果因為要關帳了，要等到 8 月才能買…</p>
+<p>啊，剩 1% 額度了，趕快下一個要跑兩個小時的 goal 多少薅一點羊毛。</p>
+</div><footer class="article-footer"><details class="link-group"><summary><span>原文與討論</span></summary><ul><li><a href="https://www.facebook.com/poyen.brian.chu/posts/pfbid02zNx6CCj1ZyMGLWdTKpsCnmn1RX5wxcMGJ2AwrPCLsqqJRRR3SVKCGeg3j13csmwzl" target="_blank" rel="noopener noreferrer">Facebook 原文<span aria-hidden="true"> ↗</span></a></li></ul></details><p class="article-source-note">本文保留原文內容；標題、摘要與閱讀版式為網站整理。</p><a href="/writing/">← 返回文章列表</a></footer></article></main><footer class="site-footer"><div><p class="site-footer__name">Po-Yen Chu</p><p>M.S. student in Management Science and Engineering at Stanford University.</p></div><div class="site-footer__links"><a href="mailto:poyenchu@stanford.edu">Email</a><a href="https://www.linkedin.com/in/po-yen-chu" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/brianCHUCHU" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.facebook.com/poyen.brian.chu" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.threads.com/@poyen_49_2002" target="_blank" rel="noopener noreferrer">Threads</a><a href="/links/">More links</a></div><p class="site-footer__meta">© 2026</p></footer></body></html>
